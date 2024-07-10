@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS API PROJECT</title>
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="hero">
+        <div id="header">
+            <h1>NEWS API PROJECT</h1>
+            <h2>Discover news from around the globe.</h2>
+        </div>
+        <form id="form" method="post">
+            
+        <div class="fbody">
+            <div class="row">    
+                <div class="in">
+                    <label class="label" for="q">topic</label>
+                    <input class="input" required placeholder=" enter your topic" type="text" name="q">
+                </div>
+                <div class="ind">
+                    <label class="label"  for="from-date">from-date</label>
+                    <input class="input" type="date" name="from">
+                </div>
+                <div class="ind">
+                    <label class="label" for="to-date">to-date</label>
+                    <input class="input" type="date" name="to">
+                </div>
+            </div></br></br>
+            <div class="row">
+                <div class="in">
+                    <label class="label" for="sortBy">sort by</label>
+                    <select name="sortBy" class="selection" >
+                        <option value="relevancy">Relevancy</option>
+                        <option value="popularity">Popularity</option>
+                        <option value="publishedAt">Latest first</option>
+                    </select>
+                </div>
+                <div class="ind">
+                    <label class="label"  for="no">articals no</label>
+                    <input class="input" placeholder=" eg:2" type="text" name="no">
+                </div>
+                <div class="ind">
+                    <label class="label" for="language">language</label>
+                    <select name="language" class="selection">
+                        <option value="en">English</option>
+                        <!-- <option value="ar">Arabic</option>
+                        <option value="zh">Chinese (zh)</option>
+                        <option value="nl">Dutch, Flemish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="he">Hebrew</option>
+                        <option value="it">Italian</option>
+                        <option value="no">Norwegian</option>
+                        <option value="pt">Portuguese (pt)</option>
+                        <option value="ru">Russian (ru)</option>
+                        <option value="sv">Swedish (sv)</option>
+                        <option value="ud">Urdu (ud)</option> -->
+                        </select>
+                    </div>
+                </div>
+                <div class="brow">
+                    <button formaction="/Lookup" type="submit">Look UP <i class="fa-brands fa-searchengin fa-2xl" style="color: #666666;"></i></button>
+                </div>
+            </div>
+        </form>
+        <div class="div">
+        <%if(locals.data){%>
+        <div class="bnews">
+            <div class="news">
+                <h2>NEWS HAS ARRIVED</h2>
+            </div>
+            
+            <div class="container">
+                <% var i = 0; do { %>
+                    <div class="article">
+                        <div class="image">
+                            <img src="<%= data.articles[i].urlToImage %>" alt="Article Image">
+                        </div>
+                        <div class="details">
+                            <div class="subject">
+                                <h4>publishedAt <%= data.articles[i].publishedAt %></h4>
+                                <h3><%= data.articles[i].title %> title</h3>
+                                <p><%= data.articles[i].content %></p>
+                            </div>
+                            <div class="info">
+                                <p>source: <%= data.articles[i].source.name %></p>
+                                <p>author: <%= data.articles[i].author %></p>
+                            </div>
+                        </div>
+                    </div>
+                <% i++; } while (i < no); %>
+            </div>
+            
+        </div><%}%>
+        
+    </div>
+    <footer >
+        <div class="nav">
+            <div class="sec">
+                <h4>News-api</h4>
+                <hr>
+                <a href="https://newsapi.org/" ><p>News-api</p> </a>
+                <a href="https://newsapi.org/pricing" ><p>API-pricing</p> </a>
+                <a href="https://newsapi.org/sources" ><p> News-sources</p> </a>
+            </div>
+            <div class="sec">
+                <h4>Developer</h4>
+                <hr>
+                <a href="#" ><p>Education-purpose </p></a>
+                <a href="https://github.com/sudarshan-7a" ><p>Github </p> </a>
+                <a href="https://discord.com/users/763746007489708092" ><p>Discord </p> </a>
+            </div>
+            <div class="sec">
+                <h4>News-API support</h4>
+            <hr>
+                <a href="#" ><p>Contact </p> </a>
+                <a href="https://twitter.com/NewsAPIorg" ><p>Twitter </p> </a>
+                <a href="https://github.com/News-API-gh" ><p>Github </p> </a>
+            </div>
+            
+        </div>  
+        <div class="copw">
+            <p>@Sudupa</p>
+            <p>© copywrite 2024</p>
+        </div>  
+        
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#hero{
+    background-image: url("../image/city.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+#form{
+    
+    padding-top: 2%;
+    margin: 0 15%;
+    text-align: center;
+    margin-bottom: 190px;
+}
+#header{
+
+    padding-top: 40px;
+}
+h1{
+    font-weight: 540;
+    font-size: 5rem;
+    color: #756E6D;
+    text-align: center;
+    width: auto;
+}
+h2{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #756E6D;
+    text-align: center;
+}
+.fbody{
+    margin: 5% auto;
+    color:#4a4242 ;
+}
+.row{
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+}
+.in{
+    display: flex;
+    flex-flow:column;
+    text-align: left;
+    width: 30%;
+    
+}
+.in input{
+    margin-top: 2px;
+    height: 25px;
+    border-radius: 4px;
+    background-color: #f7e6e5;
+    border-color: rgb(150, 85, 85);
+    border-width:1.2px ;
+}
+.ind{
+    display: flex;
+    flex-flow:column;
+    text-align: left;
+    width: 15%;
+    
+}
+.ind input{
+    height: 25px;
+    border-radius: 2px;
+    border-color: rgb(150, 85, 85);
+    text-decoration: none;
+    background-color: #f7e6e5;
+    margin-top: 2px;
+    border-width:1.2px ;
+}
+.label{
+    font-size: 24px;
+    margin: 4px 2.55px;
+}
+.selection{
+    margin-top: 2px;
+    height: 28.6px;
+    border-radius: 4px;
+    background-color: #f7e6e5;
+    border-color: rgb(101, 60, 60);
+}
+.brow{
+    margin: 40px auto;
+}
+.brow button{
+    height: 30px;
+    text-align: center;
+    width: 50%;
+    background-color: #f6d4d2;
+    border-color: #4a4242;
+    border-width:1.2px ;
+}
+.bnews{
+    margin: 0 15%;
+}
+.bnews2{
+    margin: 0 15%;
+    margin-top: 5%;
+}
+.news{
+    text-align: center;    
+}
+.news h2{
+    color: #bb8d8d;
+    font-weight:400;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    padding-top: 30px;
+}
+.container {
+    margin: 50px 0;
+    background-color: #f2dede;
+    border-radius: 10px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.details {
+    padding: 20px;
+}
+
+.subject h4 {
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.subject h3 {
+    margin-bottom: 10px;
+}
+
+.subject p {
+    margin-bottom: 20px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info p {
+    font-size: small;
+    margin: 0;
+}
+
+img{
+    max-height: 100px;
+    width: auto;
+}
+a{
+    text-decoration: none;
+}
+footer{
+    background-color: #f0e2e2;
+    /* margin-top: 200px; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+}
+.nav{
+    
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 200px;
+    align-items: center;
+    padding: 30px;
+}
+.sec{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+.sec p{
+    color: #4a4242;
+}
+.copw{
+    
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+    max-width:70% ;
+    margin: auto;
+    font-size: small;
+    font-weight: 100;
+}
+.div{
+    display: grid;
+    
+}
+@media (max-width:1045px) {
+    h1{
+         font-size: 50px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .label{
+        font-size: 16px;
+    }
+    .news h2{
+        font-size: 35px;
+    }
+}
+@media (max-width:685px) {
+    #form{
+        margin-bottom: 0px;
+    }
+    h1{
+        font-size: 40px;
+   }
+   h2{
+       font-size: 15px;
+   }
+    .row{
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fbody{
+        justify-content:end;
+        
+    }
+    .in,.ind{
+        width: 100%;
+    }
+    .news h2{
+        font-size: 30px;
+        padding: 0;
+    }
+    @media (max-width:430px) {
+        .nav{flex-direction: column;}
+    }
+}
