@@ -4,7 +4,7 @@ import axios from "axios";
 import 'dotenv/config';
 
 const app=express();
-const port=3000;
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
@@ -26,6 +26,6 @@ app.post("/Lookup", async (req,res)=>{
         
     }
 })
-app.listen(port,()=>{
-    console.log(`listening to port ${port}`);
+app.listen(process.env.port,()=>{
+    console.log(`listening to port ${process.env.port}`);
 })
